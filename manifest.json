@@ -1,0 +1,12 @@
+{
+    "display_name": "Advanced Memory & RLHF Plugin",
+    "loading_order": 1,
+    "requires": [],
+    "optional": [],
+    "js": "plugin.js",
+    "css": "style.css",
+    "author": "MemoryPlugin",
+    "version": "1.0.0",
+    "description": "Middle-term RAG memory, long-term LoRA memory, RLHF training, document import/export",
+    "homePage": ""
+}

@@ -1,0 +1,50 @@
+server:
+  host: "127.0.0.1"
+  port: 5125
+  cors_origins: ["*"]
+
+memory:
+  vector_db_path: "data/vector_db"
+  trained_archive_path: "data/trained_archive"
+  embedding_model: "all-MiniLM-L6-v2"
+  collection_name: "sillytavern_memory"
+  min_training_size_mb: 50
+  chunk_size: 512
+  chunk_overlap: 50
+  auto_store: true
+
+training:
+  lora_models_path: "data/lora_models"
+  lora_backups_path: "data/lora_backups"
+  trained_archive_path: "data/trained_archive"
+  # No default_base_model - must be provided by SillyTavern or user
+  # The plugin reads the model from ST's API connection settings
+  default_base_model: ""
+  default_epochs: 3
+  default_learning_rate: 0.0002
+  default_lora_rank: 16
+  default_lora_alpha: 32
+  default_batch_size: 4
+  gradient_accumulation_steps: 4
+  max_seq_length: 2048
+  warmup_ratio: 0.03
+  save_steps: 100
+  fp16: true
+
+rlhf:
+  feedback_path: "data/feedback"
+  min_feedback_samples: 100
+  reward_model_path: "data/reward_model"
+
+documents:
+  exports_path: "data/exports"
+  supported_import: [".txt", ".json", ".pdf", ".xml", ".doc", ".docx", ".odt", ".ods", ".odp", ".xls", ".xlsx", ".pptx", ".png", ".jpg", ".jpeg", ".gif", ".webp"]
+  supported_export: ["txt", "json", "pdf", "xml", "docx", "odt", "html"]
+
+modules:
+  enabled:
+    - "memory"
+    - "rlhf"
+    - "training"
+    - "documents"
+    - "vectordb"

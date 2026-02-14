@@ -1,0 +1,201 @@
+{
+    "_meta": {
+        "language": "Arabic",
+        "native_name": "العربية",
+        "language_code": "ar",
+        "author": "MemoryPlugin",
+        "version": "1.1.0",
+        "last_updated": "2025-01-01"
+    },
+
+    "plugin_title": "🧠 الذاكرة المتقدمة و RLHF",
+
+    "status_title": "📊 الحالة",
+    "status_backend": "الخلفية",
+    "status_device_detecting": "الجهاز: جارٍ الكشف...",
+    "status_vectordb": "قاعدة المتجهات: 0 ميجابايت",
+    "status_lora_none": "LoRA: لا يوجد",
+    "status_connected": "🟢",
+    "status_disconnected": "🔴",
+    "status_loading": "⏳",
+
+    "memory_title": "💾 إدارة الذاكرة",
+    "memory_autostore_on": "📝 التخزين التلقائي: مُفعّل",
+    "memory_autostore_off": "📝 التخزين التلقائي: مُعطّل",
+    "memory_rag_on": "🧠 حقن RAG: مُفعّل",
+    "memory_rag_off": "🧠 حقن RAG: مُعطّل",
+    "memory_rag_max_chars": "الحد الأقصى لأحرف RAG:",
+    "memory_rag_min_score": "الحد الأدنى للنتيجة:",
+    "memory_store_chat": "📥 تخزين المحادثة الحالية",
+    "memory_query": "🔍 استعلام الذاكرة",
+    "memory_query_placeholder": "أدخل الاستعلام...",
+    "memory_query_search": "بحث",
+    "memory_no_results": "لم يتم العثور على نتائج.",
+    "memory_no_data": "لا توجد بيانات محادثة للتخزين.",
+    "memory_stored_success": "تم تخزين المحادثة في الذاكرة!",
+    "memory_store_failed": "فشل تخزين المحادثة:",
+    "memory_query_failed": "فشل الاستعلام:",
+
+    "browser_title": "📋 متصفح الذاكرة",
+    "browser_all_characters": "جميع الشخصيات",
+    "browser_browse": "تصفح",
+    "browser_history": "السجل",
+    "browser_prev": "◀ السابق",
+    "browser_next": "التالي ▶",
+    "browser_page": "صفحة",
+    "browser_select_all": "تحديد الكل",
+    "browser_total": "الإجمالي:",
+    "browser_documents": "مستندات",
+    "browser_no_documents": "لم يتم العثور على مستندات.",
+    "browser_no_history": "لم يتم العثور على سجل.",
+    "browser_recent_history": "سجل الذاكرة الأخير",
+    "browser_entries": "إدخالات",
+    "browser_tag_auto": "[تلقائي]",
+    "browser_tag_manual": "[يدوي]",
+    "browser_delete_selected": "🗑️ حذف المحدد",
+    "browser_clear_character": "🗑️ مسح الشخصية",
+    "browser_clear_all": "⚠️ مسح الكل",
+    "browser_select_character_first": "اختر شخصية أولاً",
+    "browser_confirm_delete_selected": "حذف {count} مستندات محددة؟",
+    "browser_confirm_delete_character": "حذف جميع ذكريات \"{character}\"؟",
+    "browser_confirm_clear_all": "⚠️ حذف جميع الذكريات؟\n\nلا يمكن التراجع عن هذا!",
+    "browser_confirm_clear_all_2": "هل أنت متأكد حقاً؟ سيتم فقدان جميع البيانات المخزنة.",
+    "browser_deleted_success": "تم حذف {count} مستندات",
+    "browser_deleted_character": "تم حذف {count} مستندات لـ {character}",
+    "browser_delete_failed": "فشل الحذف:",
+    "browser_clear_failed": "فشل المسح:",
+    "browser_browse_failed": "فشل التصفح:",
+    "browser_history_failed": "فشل السجل:",
+    "browser_no_selected": "لم يتم تحديد مستندات",
+
+    "documents_title": "📄 إدارة المستندات",
+    "documents_upload": "📂 رفع المستندات",
+    "documents_uploading": "جارٍ رفع {filename} ({current}/{total})...",
+    "documents_upload_complete": "تم رفع جميع الملفات!",
+    "documents_upload_failed": "فشل رفع {filename}:",
+
+    "rlhf_title": "👍 ملاحظات RLHF",
+    "rlhf_toggle": "🎯 تبديل وضع الملاحظات",
+    "rlhf_toggle_on": "🎯 وضع الملاحظات: مُفعّل",
+    "rlhf_stats": "إيجابي: {positive} | سلبي: {negative} | ممتاز: {excellent} | الإجمالي: {total}",
+    "rlhf_hint": "عند التفعيل، تظهر أزرار الإعجاب/عدم الإعجاب على كل رسالة ذكاء اصطناعي.",
+    "rlhf_feedback_recorded": "تم تسجيل الملاحظة!",
+    "rlhf_feedback_failed": "فشل إرسال الملاحظة",
+    "rlhf_btn_good": "👍",
+    "rlhf_btn_bad": "👎",
+    "rlhf_btn_excellent": "⭐",
+    "rlhf_tooltip_good": "استجابة جيدة",
+    "rlhf_tooltip_bad": "استجابة سيئة",
+    "rlhf_tooltip_excellent": "ممتاز!",
+
+    "training_title": "🏋️ تدريب LoRA",
+    "training_epochs": "الحقب:",
+    "training_learning_rate": "معدل التعلم:",
+    "training_lora_rank": "رتبة LoRA:",
+    "training_batch_size": "حجم الدفعة:",
+    "training_start": "🚀 بدء تدريب LoRA",
+    "training_cancel": "⛔ إلغاء التدريب",
+    "training_confirm": "بدء تدريب LoRA؟ قد يستغرق هذا وقتاً ويستخدم موارد كبيرة.",
+    "training_preparing": "جارٍ التحضير...",
+    "training_eta": "الوقت المتبقي: {eta}",
+    "training_status": "الحقبة {current_epoch}/{total_epochs} | الخطوة {current_step}/{total_steps} | الخسارة: {loss}",
+    "training_completed": "اكتمل التدريب! تم حفظ محول LoRA.",
+    "training_failed": "فشل التدريب:",
+    "training_cancelled": "تم إلغاء التدريب.",
+    "training_start_failed": "فشل بدء التدريب:",
+    "training_cancel_failed": "فشل الإلغاء:",
+    "training_base_model": "النموذج الأساسي:",
+    "training_model_placeholder": "مسار النموذج المحلي (يُكتشف تلقائياً من ST)...",
+    "training_model_hint": "مسار النموذج المحلي مطلوب لتدريب LoRA. استخدم \"كشف النموذج\" أو أدخله يدوياً.",
+    "training_model_detecting": "النموذج: انقر \"كشف النموذج\" للقراءة من SillyTavern",
+    "training_model_detected": "تم كشف النموذج من SillyTavern",
+    "training_model_not_detected": "تعذر الكشف التلقائي عن النموذج. يرجى إدخال المسار يدوياً.",
+    "training_model_manual_hint": "أدخل معرف HuggingFace أو المسار المحلي لأوزان النموذج الأساسي.",
+    "training_model_source": "المصدر",
+    "training_model_required": "مسار النموذج الأساسي مطلوب لتدريب LoRA!",
+    "training_model_label": "النموذج الأساسي",
+    "training_detect_model": "كشف النموذج",
+    "training_cloud_warning": "يبدو أن هذا نموذج API سحابي. يتطلب تدريب LoRA أوزان نموذج محلية على القرص. هل تريد المتابعة؟",
+
+    "export_title": "📤 التصدير والملخص",
+    "export_summary": "📋 إنشاء ملخص",
+    "export_format_txt": "نص عادي (.txt)",
+    "export_format_json": "JSON (.json)",
+    "export_format_pdf": "PDF (.pdf)",
+    "export_format_xml": "XML (.xml)",
+    "export_format_docx": "Word (.docx)",
+    "export_format_odt": "OpenDocument Text (.odt)",
+    "export_format_html": "HTML (.html)",
+    "export_chat": "💾 تصدير المحادثة",
+    "export_print": "🖨️ طباعة المحادثة",
+    "export_success": "تم تصدير المحادثة!",
+    "export_failed": "فشل التصدير:",
+    "export_summary_failed": "فشل الملخص:",
+    "export_print_title": "تصدير المحادثة",
+    "export_print_exported": "تم التصدير:",
+
+    "modules_title": "🔧 مدير الوحدات",
+    "modules_none": "لا توجد وحدات متاحة",
+    "modules_enabled": "مُفعّل",
+    "modules_disabled": "مُعطّل",
+    "modules_toggle_failed": "فشل تبديل الوحدة",
+
+    "i18n_title": "🌐 اللغة",
+    "i18n_unsupported": "اللغة \"{language}\" غير متاحة. يتم استخدام الإنجليزية.",
+    "i18n_using": "يُستخدم: {language}",
+    "i18n_open_folder": "📂 فتح مجلد الترجمات",
+    "i18n_coverage": "تغطية الترجمة: {translated}/{total} ({percent}%)",
+
+    "device_shared": "[مشترك]",
+
+    "console_initializing": "جارٍ التهيئة...",
+    "console_backend_running": "الخلفية تعمل.",
+    "console_backend_retrying": "الخلفية غير جاهزة، جارٍ إعادة المحاولة... ({retries} محاولات متبقية)",
+    "console_backend_unreachable": "الخلفية غير قابلة للوصول على {url}. يرجى تشغيلها يدوياً: py backend/start_backend.py",
+    "console_handlers_registered": "تم تسجيل معالجات الأحداث.",
+    "console_initialized": "تمت التهيئة بنجاح.",
+    "console_feedback_mode": "وضع الملاحظات:",
+    "console_autostore": "التخزين التلقائي:",
+    "console_rag_injection": "حقن RAG:",
+    "console_restored_feedback": "تم استعادة وضع الملاحظات: مُفعّل",
+    "console_restored_autostore": "تم استعادة التخزين التلقائي: مُعطّل",
+    "console_restored_rag": "تم استعادة حقن RAG: مُعطّل",
+
+    "chunks_title": "📦 إدارة الأجزاء والنماذج",
+    "chunks_model_status": "النموذج الحالي:",
+    "chunks_model_none": "لم يتم كشف نموذج",
+    "chunks_model_new": "🆕 تم كشف نموذج جديد!",
+    "chunks_model_same": "✓ نفس النموذج",
+    "chunks_model_changed": "⚠️ تم تغيير النموذج!",
+    "chunks_register_model": "🔍 كشف النموذج",
+    "chunks_model_path_placeholder": "مسار ملف أو مجلد النموذج...",
+    "chunks_model_friendly_name": "اسم مألوف (اختياري):",
+    "chunks_overview": "📊 نظرة عامة",
+    "chunks_pending": "معلّق",
+    "chunks_trained": "مُدرّب",
+    "chunks_failed": "فاشل",
+    "chunks_restored": "مُستعاد",
+    "chunks_lora_section": "🧬 محولات LoRA",
+    "chunks_lora_compatible": "متوافق مع النموذج الحالي:",
+    "chunks_lora_unusable": "غير قابل للاستخدام (نموذج خاطئ):",
+    "chunks_lora_select": "تحديد",
+    "chunks_lora_delete": "حذف",
+    "chunks_lora_delete_files": "حذف الملفات أيضاً",
+    "chunks_lora_none": "لم يتم العثور على محولات LoRA",
+    "chunks_lora_selected": "تم تحديد LoRA: {name}",
+    "chunks_lora_incompatible": "⚠️ تم تدريب LoRA هذا لنموذج مختلف",
+    "chunks_restore_section": "♻️ استعادة إلى RAG",
+    "chunks_restorable": "{count} أجزاء ({docs} مستندات) يمكن استعادتها",
+    "chunks_restore_all": "♻️ استعادة الكل إلى RAG",
+    "chunks_restore_selected": "♻️ استعادة المحدد",
+    "chunks_restore_success": "تم استعادة {chunks} أجزاء ({docs} مستندات) إلى RAG",
+    "chunks_restore_none": "لا توجد أجزاء متاحة للاستعادة",
+    "chunks_history": "📜 سجل العمليات",
+    "chunks_history_show": "عرض السجل",
+    "chunks_known_models": "📋 النماذج المعروفة",
+    "chunks_model_current_tag": "[حالي]",
+    "chunks_confirm_delete_lora": "حذف LoRA \"{name}\"؟ لا يمكن التراجع عن هذا.",
+    "chunks_confirm_delete_lora_files": "حذف ملفات LoRA من القرص أيضاً؟",
+    "chunks_model_switch_warning": "تم تغيير النموذج! {unusable} من محولات LoRA أصبحت غير قابلة للاستخدام. {restorable} أجزاء ({docs} مستندات) يمكن استعادتها إلى RAG.",
+    "chunks_auto_restore_prompt": "هل تريد استعادة البيانات غير المدربة إلى RAG الآن؟"
+}

@@ -1,0 +1,33 @@
+fastapi>=0.104.1
+uvicorn>=0.24.0
+pydantic>=2.5.0
+python-multipart>=0.0.6
+# Vector Database & Embeddings
+chromadb>=0.4.22
+sentence-transformers>=2.2.2
+# Document Processing
+PyPDF2>=3.0.1
+python-docx>=1.1.0
+openpyxl>=3.1.2
+odfpy>=1.4.1
+python-pptx>=0.6.23
+Pillow>=10.1.0
+lxml>=4.9.3
+beautifulsoup4>=4.12.2
+# ML & Training
+#torch>=2.1.0
+transformers>=4.36.0
+peft>=0.7.0
+datasets>=2.15.0
+accelerate>=0.25.0
+trl>=0.7.4
+bitsandbytes>=0.41.0
+# Export
+reportlab>=4.0.8
+jinja2>=3.1.2
+# Utilities
+pyyaml>=6.0.1
+tqdm>=4.66.1
+aiofiles>=23.2.1
+httpx>=0.25.2
+psutil>=5.9.6

@@ -1,0 +1,14 @@
+{
+    "name": "sillytavern-memory-plugin",
+    "version": "1.0.0",
+    "description": "Advanced Memory & RLHF Plugin for SillyTavern",
+    "main": "plugin.js",
+    "scripts": {
+        "install-backend": "cd backend && pip install -r requirements.txt",
+        "start-backend": "cd backend && python start_backend.py",
+        "test": "cd backend && python -m pytest tests/"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
