@@ -1,5 +1,7 @@
 # SillyTavern Advanced Memory & RLHF Plugin
 
+I was asked to uplad this, so I did. I can't really support this as I'm not good in programming.
+
 A comprehensive modular plugin for SillyTavern that adds:
 
 - **Middle-Term Memory**: RAG-based retrieval using ChromaDB vector database
@@ -51,33 +53,29 @@ A comprehensive modular plugin for SillyTavern that adds:
 │ └───────────────────────────────────────────────┘ │
 └──────────────────────────────────────────────────────┘
 
-text
-
-
 ---
 
 ## Installation
 
 ### 1. Clone into SillyTavern's extensions directory
 
-```bash
+```
 cd SillyTavern/public/scripts/extensions/third-party/
-git clone <repo-url> Advanced_Memory_and_RLHF
+git clone [<repo-url>](https://github.com/emogie/SillyTavern_Advanced_Memory_and_RLHF) Advanced_Memory_and_RLHF
 
-2. Install Python dependencies
+2. Install npm and Python dependencies
 
-Bash
+cd Advanced_Memory_and_RLHF
+npm install
 
 cd Advanced_Memory_and_RLHF/backend
 pip install -r requirements.txt
 
 3. Start SillyTavern
 
-The backend starts automatically when SillyTavern loads the plugin.
+The backend starts automatically when SillyTavern loads the plugin (if you drop plugins folder SillyTavern/).
 
 If auto-start fails, start manually:
-
-Bash
 
 cd Advanced_Memory_and_RLHF/backend
 py start_backend.py
@@ -146,11 +144,11 @@ CPU	PyTorch	Fallback (slower)
 Module Management
 
 All features can be independently enabled/disabled via the Module Manager panel in the UI.
+```
+
 Configuration
 
 Configuration is stored in backend/config.yaml:
-
-YAML
 
 server:
   host: "127.0.0.1"
@@ -262,8 +260,6 @@ Endpoint	Method	Description
 /modules/toggle	POST	Enable/disable a module
 Data Flow
 
-text
-
 User Chat ──► Auto-Store ──► ChromaDB Vector DB (Middle-Term Memory)
                                       │
                     [< 50 MB? Keep collecting]
@@ -301,8 +297,6 @@ User clicks "Start Training" ──► Backup existing LoRA
                     • Fresh feedback collection begins
 
 Directory Structure
-
-text
 
 Advanced_Memory_and_RLHF/
 ├── plugin.js                          # SillyTavern plugin entry point (frontend)
@@ -399,8 +393,6 @@ Check the SillyTavern console for error messages. Common issues:
 
 Start manually for detailed errors:
 
-Bash
-
 cd backend
 py start_backend.py
 
@@ -459,8 +451,15 @@ License
 MIT License
 
 Copyright (c) 2026 emogie
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+documentation files (the “Software”), to deal in the Software without restriction, including without limitation 
+the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and 
+to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of 
+the Software.
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO 
+THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
